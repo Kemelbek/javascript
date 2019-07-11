@@ -16,4 +16,4 @@ for(var k = 0;k<str.length;k++){
 }
 return console.log(arrOfStr[0]);
 }
-findFirstChar("abacddbedc");
+findFirstChar("abacddbdcjjfadsahhagdsfhjdsa");
