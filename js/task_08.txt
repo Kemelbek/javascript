@@ -1,0 +1,15 @@
+(2 < 3) && (3 > 4) || true
+!true && (!true || 100 != 5 * 5)
+("123" == 123) || ((10 <= 10) && ('' === false))
+
+1) true && false || true 
+ false || true 
+ true
+
+2) false && (false || true) 
+false && true
+false
+
+3) true || (true && false)
+true || false
+true
