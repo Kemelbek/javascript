@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form class="form">
+        <input type="text" name="username" />
+        <input type="text" name="password" />
+        <input type="submit" value="Войти" disabled />
+    </form>
+    <script>
+        document.querySelector('form').addEventListener('input', inPut);
+
+        let firVal = document.querySelectorAll('input')[0],
+            secVal = document.querySelectorAll('input')[1];
+        function inPut() {
+            if (firVal.value.length > 5 && secVal.value.length>5) {
+                document.querySelectorAll('input')[2].disabled = false;
+            } else document.querySelectorAll('input')[2].disabled = true;
+        }
+
+        let btn = document.querySelector('input')[2];
+        console.log(btn);
+        // btn.onclick(alert(firVal));
+    </script>
+</body>
+
+</html>

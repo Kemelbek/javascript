@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+</head>
+
+<body>
+    <ul class="twitter__list">
+        <li>Mike Wazowski <a href="#wazowski">#wazowski</a> followers:<strong>50</strong></li>
+        <li>Sam Burner <a href="#burner">#burner</a> followers: <strong>25</strong></li>
+        <li>Vasya Pupkin <a href="#pupkin">#pupkin</a> followers: <strong>500</strong></li>
+        <li>Jack London <a href="#london">#london</a> followers: <strong>115</strong></li>
+        <li>Brad Pitt <a href="#pitt">#pitt</a> followers: <strong>5</strong></li>
+    </ul>
+
+    <script>
+        let liArr = document.querySelectorAll('li');
+        liArr[2].remove();
+        let liTwo = document.querySelectorAll('li')[2];
+        liTwo.childNodes[0].textContent = 'Paul Mccarthy ';
+        liTwo.childNodes[1].textContent = '#mccarthy';
+        liTwo.childNodes[3].textContent = '1500';
+        
+    </script>
+</body>
+
+</html>

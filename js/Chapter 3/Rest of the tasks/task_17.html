@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container">Tasks</div>
+    <form>
+        <input class="addTask" type="text">
+        <button type='button' onclick="doSmth()">add</button>
+    </form>
+    <script>
+    function doSmth(){
+        let task = document.createElement('div');
+        let cont = document.querySelector('#container');
+        let btn = document.createElement('button');
+        btn.append('x');
+        btn.onclick = function rem(){
+            task.remove();
+            btn.remove();
+        };
+        
+        task.className = 'task_item';
+        task.append(btn, document.querySelector('.addTask').value);   
+        cont.append(task);
+        console.log(task);
+        
+      
+    }
+    </script>
+</body>
+
+</html>

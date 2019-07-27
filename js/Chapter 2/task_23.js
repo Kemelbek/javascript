@@ -6,8 +6,8 @@ Animal.prototype = {
     }
 };
 
-function Dog() extends Animal(){
-    }
+function Dog() {}
+    Dog.prototype = Object.create(Animal.prototype);
 // Add your code below this line
 let beagle = new Dog();
 beagle.eat(); // Should print "nom nom nom"

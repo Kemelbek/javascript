@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Load Image</title>
+</head>
+
+<body>
+    <div>
+    <form>
+        <b>Load Image</b>
+        <input type="button" onclick="loadImg()" value="Load an Image">
+    </form>
+    <script>
+        function loadImg() {
+            let arr = [{
+                src: "http://farm4.staticflickr.com/3691/11268502654_f28f05966c_m.jpg",
+                width: "240",
+                height: "160"
+            }, {
+                src: "http://farm1.staticflickr.com/33/45336904_1aef569b30_n.jpg",
+                width: "240",
+                height: "160"
+
+            }, {
+                src: "http://farm6.staticflickr.com/5211/5384592886_80a512e2c9.jpg",
+                width: "240",
+                height: "160"
+            }]
+
+            let preBuffer = [];
+            for (let i = 0; i < arr.length; i++) {
+                preBuffer[i] = new Image();
+                preBuffer[i].src = arr[i].src;
+                preBuffer[i].height = arr[i].height;
+                preBuffer[i].width = arr[i].width;
+            }
+
+            function getRandom(min,max) {
+                imn = Math.floor(Math.random() *(max-min+1)-min);
+                console.log(preBuffer);
+                return preBuffer[imn];
+            }
+
+            let newImage = getRandom(0,preBuffer.length-1);
+            let images = document.getElementsByTagName('img');
+            for (let p = 0; p < images.length; p++) {
+                images[0].parentNode.removeChild(images[0]);
+            }
+            document.body.appendChild(newImage);
+        }
+    </script>
+    </div>
+</body>
+
+</html>

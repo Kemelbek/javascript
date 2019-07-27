@@ -1,5 +1,5 @@
-function Cat(name) {
-    this.name = name;
+class Cat{
+
 }
 Cat.prototype = {
     constructor: Cat,
